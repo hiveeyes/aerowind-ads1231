@@ -17,7 +17,7 @@ make build
 ## Hardware support
 - Atmel AVR
 - Atmel SAM
-- Espressif ESP8266, ESP32
+- Espressif ESP8266
 
 ## Caveat
 
