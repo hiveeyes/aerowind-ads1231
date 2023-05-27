@@ -1,0 +1,20 @@
+{
+    "name": "aerowind-ads1231",
+    "keywords": "ads1231, scale, weight",
+    "description": "An Arduino library to interface the Texas Instruments ADS1231 24-Bit ADC, an analog-to-digital converter for weight scales.",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/hiveeyes/aerowind-ads1231.git"
+    },
+    "version": "0.0.0",
+    "exclude": "tests",
+    "examples": "examples/*/*.ino",
+    "frameworks": "arduino",
+    "platforms": [
+        "atmelavr",
+        "espressif8266",
+        "espressif32",
+        "atmelsam",
+        "ststm32"
+    ]
+}

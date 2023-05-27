@@ -94,7 +94,7 @@ long ADS1231::calibrate() {
 
 // send pulse to ads1231
 void ADS1231::sclPulse() {
-    volatile uint8_t *out;
+    volatile PortReg *out;
     out = portOutputRegister(ADS1231s[this->ADS1231Index].sclPort);
     *out |= ADS1231s[this->ADS1231Index].sclBit;    // set sclPin high
     //delayMicroseconds(1);
