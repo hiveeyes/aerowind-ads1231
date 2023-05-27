@@ -13,7 +13,6 @@
     "platforms": [
         "atmelavr",
         "espressif8266",
-        "espressif32",
         "atmelsam",
         "ststm32"
     ]
