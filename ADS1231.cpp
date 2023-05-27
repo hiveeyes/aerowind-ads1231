@@ -17,7 +17,7 @@ ADS1231::~ADS1231() {/*nothing to destruct*/}
 // turn on resp. off the ads
 void ADS1231::attach(uint8_t sclPin, uint8_t dataPin, uint8_t pwdnPin) {
     if (ADS1231Count < MAX_ADS1231) {
-        volatile uint8_t *out;
+        volatile PortReg *out;
         // store Pin numbers
         ADS1231s[this->ADS1231Index].sclBit = digitalPinToBitMask(sclPin);
         ADS1231s[this->ADS1231Index].sclPort = digitalPinToPort(sclPin);
@@ -26,8 +26,7 @@ void ADS1231::attach(uint8_t sclPin, uint8_t dataPin, uint8_t pwdnPin) {
         ADS1231s[this->ADS1231Index].pwdnBit = digitalPinToBitMask(pwdnPin);
         ADS1231s[this->ADS1231Index].pwdnPort = digitalPinToPort(pwdnPin);
         // block interrupts
-        uint8_t oldSREG = SREG;
-        cli();
+        noInterrupts();
         // initialize the clock pin as an output:
         pinMode(sclPin, OUTPUT);
         out = portOutputRegister(ADS1231s[this->ADS1231Index].sclPort);
@@ -39,7 +38,7 @@ void ADS1231::attach(uint8_t sclPin, uint8_t dataPin, uint8_t pwdnPin) {
         // initialize the power down pin as an output:
         pinMode(pwdnPin, OUTPUT);
         // reenable interrupts
-        SREG = oldSREG;
+        interrupts();
         // reset ads1232 with a 10ms pulse on power down pin:
         power(LOW);
         delay(10);
@@ -49,7 +48,7 @@ void ADS1231::attach(uint8_t sclPin, uint8_t dataPin, uint8_t pwdnPin) {
 
 // turn on resp. off the ads
 void ADS1231::power(uint8_t power_mode) {
-    volatile uint8_t *out;
+    volatile PortReg *out;
     if (power_mode == LOW) {
         out = portOutputRegister(ADS1231s[this->ADS1231Index].pwdnPort);
         *out &= ~ADS1231s[this->ADS1231Index].pwdnBit;   // set pwdnPin low
