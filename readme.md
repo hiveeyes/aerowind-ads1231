@@ -6,6 +6,19 @@ An Arduino library to interface the [Texas Instruments ADS1231 24-Bit ADC], an
 analog-to-digital converter for weight scales. The ADS1231 is a 24-Bit, 80SPS,
 1-channel delta-sigma ADC for resistive bridge sensors & weight scales.
 
+## Usage
+
+```shell
+git clone https://github.com/hiveeyes/aerowind-ads1231
+cd aerowind-ads1231
+make build
+```
+
+## Hardware support
+- Atmel AVR
+- Atmel SAM
+- Espressif ESP8266, ESP32
+
 ## Caveat
 
 You probably do not want to use this library. Have a look at the
