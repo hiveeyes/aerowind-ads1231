@@ -8,15 +8,15 @@ analog-to-digital converter for weight scales. The ADS1231 is a 24-Bit, 80SPS,
 
 ## Caveat
 
-You probably do not want to use this driver. Have a look at the
-[ThomasRyanDavies/ADS1231] Arduino driver by Thomas Ryan Davies and
-[other drivers for the ADS1231] instead.
+You probably do not want to use this library. Have a look at the
+[ThomasRyanDavies/ADS1231] Arduino library by Thomas Ryan Davies and
+[other libraries for the ADS1231] instead.
 
 ## Acknowledgements
 
-Source: Arduino Forum `Topic "SPI Load cell chip ADS1231"`_, `ADS1231_beta.zip`_.
-Author: aerowind
-Date: Jan 31, 2014
+- Source: Arduino Forum `Topic "SPI Load cell chip ADS1231"`_, `ADS1231_beta.zip`_.
+- Author: aerowind
+- Date: Jan 31, 2014
 
 Thank you!
 
@@ -37,7 +37,7 @@ See also:
 
 
 [ADS1231_beta.zip]: https://forum.arduino.cc/uploads/short-url/mNIEHZSUA7hV1eJFrO5Fqe7koIb.zip
-[other drivers for the ADS1231]: https://community.hiveeyes.org/t/code-fur-ads1231/286/3
+[other libraries for the ADS1231]: https://community.hiveeyes.org/t/code-fur-ads1231/286/3
 [Texas Instruments ADS1231 24-Bit ADC]: https://community.hiveeyes.org/t/ads1231-24-bit-adc-from-texas-instruments/2141
 [ThomasRyanDavies/ADS1231]: https://github.com/ThomasRyanDavies/ADS1231
 [Topic "SPI Load cell chip ADS1231"]: https://forum.arduino.cc/t/spi-load-cell-chip-ads1231/128267/6
