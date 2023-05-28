@@ -6,7 +6,7 @@
         "type": "git",
         "url": "https://github.com/hiveeyes/aerowind-ads1231.git"
     },
-    "version": "0.0.0",
+    "version": "0.1.0",
     "exclude": "tests",
     "examples": "examples/*/*.ino",
     "frameworks": "arduino",
