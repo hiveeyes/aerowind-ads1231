@@ -27,13 +27,22 @@ You probably do not want to use this library. Have a look at the
 
 ## Acknowledgements
 
-- Source: Arduino Forum `Topic "SPI Load cell chip ADS1231"`_, `ADS1231_beta.zip`_.
+This library has been sourced from the [Arduino Forum].
+
+- Source: Arduino Forum [Topic "SPI Load cell chip ADS1231"], [ADS1231_beta.zip].
 - Author: aerowind
 - Date: Jan 31, 2014
 
 Thank you!
 
 ## Appendix
+
+### Fixes
+
+For compatibility with ESP8266, those compile-time errors have been fixed.
+
+- [error: 'SREG' was not declared in this scope](https://github.com/hiveeyes/aerowind-ads1231/issues/1)
+- [error: cannot convert 'volatile uint32_t*' to 'volatile uint8_t*'](https://github.com/hiveeyes/aerowind-ads1231/issues/2)
 
 ### Considerations about real world effects caused by physics
 
@@ -50,6 +59,7 @@ See also:
 
 
 [ADS1231_beta.zip]: https://forum.arduino.cc/uploads/short-url/mNIEHZSUA7hV1eJFrO5Fqe7koIb.zip
+[Arduino Forum]: https://forum.arduino.cc/
 [other libraries for the ADS1231]: https://community.hiveeyes.org/t/code-fur-ads1231/286/3
 [Texas Instruments ADS1231 24-Bit ADC]: https://community.hiveeyes.org/t/ads1231-24-bit-adc-from-texas-instruments/2141
 [ThomasRyanDavies/ADS1231]: https://github.com/ThomasRyanDavies/ADS1231
